@@ -1,6 +1,6 @@
 <template>
     <StackLayout v-bind:class="setClass(todo)" orientation="horizontal">
-        <Label :text="todo.name"></Label>
+        <Label :text="todo.name" @tap="onItemTap"></Label>
         <Button style="float:left" text="Edit" @tap="onButtonTap"></Button>
         <Button style="float:left" v-if="todo.status === 1" text="Delete" @tap="onButtonTapDelete"></Button>
     </StackLayout>
@@ -8,6 +8,7 @@
 
 <script>
     import EditTodo from "../EditTodo/EditTodo";
+    import Details from "../details/details";
     const appSettings = require('tns-core-modules/application-settings');
 
     export default {
@@ -39,6 +40,14 @@
               } else {
                   return "done"
               }
+            },
+
+            onItemTap() {
+                this.$navigateTo(Details, {
+                    props: {
+                        todo_items: this.todo
+                    }
+                });
             },
 
             onButtonTap() {

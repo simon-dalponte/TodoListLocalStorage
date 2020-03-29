@@ -1,5 +1,5 @@
 <template>
-    <ListView class="zinzin" for="todo in todos" @itemTap="onItemTap">
+    <ListView class="zinzin" for="todo in todos">
         <v-template>
             <todo :todo="todo"></todo>
         </v-template>
@@ -17,14 +17,7 @@
             Details,
         },
         methods: {
-            onItemTap(args) {
-                console.log(args)
-                this.$navigateTo(Details, {
-                    props: {
-                        todo_items: this.todos[args.index]
-                    }
-                });
-            }
+
         }
     };
 </script>

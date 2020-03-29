@@ -1,5 +1,8 @@
 <template>
     <Page>
+        <ActionBar class="nt-action-bar" title="Todos">
+            <ActionItem text="Back" @tap="$navigateBack"></ActionItem>
+        </ActionBar>
         <StackLayout>
             <Label class="fab" :text="todo_items.description"></Label>
             <StackLayout orientation="horizontal">
