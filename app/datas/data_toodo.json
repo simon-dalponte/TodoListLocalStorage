@@ -1,0 +1,16 @@
+{
+  "todo_list" : [
+    {
+      "id" : "zinzin",
+      "name" : "Faire les courses",
+      "description" : "acheter des pomme, de la pate, et du beurre",
+      "status": 0
+    },
+    {
+      "id": "coucou",
+      "name" : "Voiture",
+      "description" : "néttoyer la voiture",
+      "status": 1
+    }
+  ]
+}

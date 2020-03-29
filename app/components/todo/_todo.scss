@@ -1,0 +1,22 @@
+.todo {
+    // Vars
+
+    // Support
+
+    // Module
+    & {
+        .done {
+            color: green;
+        }
+        .not-done{
+            color: red;
+        }
+        button{
+            float: left;
+        }
+    }
+
+    // Facets
+
+    // States
+}
